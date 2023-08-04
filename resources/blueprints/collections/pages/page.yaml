@@ -1,0 +1,87 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+              width: 66
+          -
+            handle: title_header
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Title header'
+              icon: text
+              instructions: 'De titel van de header'
+              width: 33
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+          -
+            handle: assets_field
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Header afbeelding'
+              icon: assets
+              instructions: 'De grote afbeelding voor de header'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
