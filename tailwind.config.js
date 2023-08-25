@@ -7,14 +7,26 @@ module.exports = {
     './content/**/*.md'
   ],
   theme: {
-    extend: {
       screens: {
-        'lg': {'max': '1176px'},
-        'md': '900px',
-        'sm': '768px',
-        'mob': '600px',
-        'xs': '500px'
-      }
+        xl: "1177px",
+        lg: { max: "1176px" },
+        md: { max: "900px" },
+        sm: { max: "768px" },
+        mob: { max: "600px" },
+        xs: { max: "500px" },
+    },
+    extend: {
+      fontFamily: {
+        fontTitle: ['"Playfair Display"', 'serif'],
+        fontText: ['"Jost"', 'sans-serif'],
+      },
+      colors: {
+        'primary': '#6A0F02',
+        'secondary': '#BEA6A0',
+        'tertiary': '#D19F9D',
+        'tint': 'D9D9D9',
+        'text': '#484848',
+      },
     },
     container: {
       center: true,
@@ -22,5 +34,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('autoprefixer'),
   ],
 }

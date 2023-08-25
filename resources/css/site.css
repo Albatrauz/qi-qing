@@ -3,3 +3,29 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600&display=swap');
+
+p {
+    @apply font-fontText;
+}
+
+div nav ul li a {
+    @apply font-fontText font-medium transition-all duration-300 px-4 text-[19px] text-primary;
+    @apply hover:text-secondary;
+}
+
+div .logo {
+    @apply w-[200px] h-[50px] bg-primary;
+}
+
+.w-figure {
+    @apply relative;
+}
+
+.w-figure::after {
+    @apply content-[""] absolute w-[505px] bg-tertiary aspect-square rounded-full top-0 right-[-195px];
+}
+
+p {
+    @apply text-text;
+}

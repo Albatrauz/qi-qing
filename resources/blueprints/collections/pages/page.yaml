@@ -13,13 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: content
-            field:
-              type: markdown
-              display: Content
-              localizable: true
-              width: 66
-          -
             handle: title_header
             field:
               input_type: text
@@ -34,7 +27,14 @@ tabs:
               visibility: visible
               hide_display: false
           -
-            handle: assets_field
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+              width: 66
+          -
+            handle: header_asset
             field:
               max_files: 1
               min_files: 1

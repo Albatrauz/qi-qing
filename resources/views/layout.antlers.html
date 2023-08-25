@@ -7,9 +7,32 @@
         <title>{{ title ?? site:name }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
-            {{ template_content }}
+    <body class="font-sans leading-normal text-gray-800">
+        {{# TODO: Header kan hier komen #}}
+        <div class="w-full h-[100px] flex items-center flex-col">
+            <nav class="flex h-full justify-between items-center w-full container">
+                <a href="{{homepage}}">
+                    <img src="{{ vite:asset src="resources/images/logo.svg" }}">
+                </a>
+                <ul class="flex">
+                    {{ nav:main_navigation }}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:main_navigation }}
+                </ul>
+            </nav>
         </div>
+
+        {{ template_content }}
+        
+        <footer>
+            <div class="container grid grid-cols-12 lg:px-6 sm:px-4">
+                <div class="col-span-4">
+                    Contact gegevens
+                </div>
+                <div class="col-span-8">
+                    Navigatie
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
