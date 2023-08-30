@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "fontawesome.min.css";
+@import "solid.min.css";
 
 /* This is all you. */
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600&display=swap');
@@ -10,7 +12,7 @@ p {
 }
 
 div nav ul li a {
-    @apply font-fontText font-medium transition-all duration-300 px-4 text-[19px] text-primary;
+    @apply font-fontText font-medium transition-all duration-300 mx-4 text-[19px] text-primary;
     @apply hover:text-secondary;
 }
 
